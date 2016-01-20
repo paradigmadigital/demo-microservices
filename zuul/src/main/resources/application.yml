@@ -1,0 +1,28 @@
+info:
+  component: zuul server app
+    
+server:
+  port: 8080
+  
+spring:
+  config:
+    name:  zuulserver
+  application:
+    name: zuulserver
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8888
+
+zuul:
+  routes:    
+    microservices-users-bbdd:
+      path: /api/app-users/**
+      serviceId: microservice-users-bbdd
+    microservice-mongo-comments:
+      path: /api/app-comments/**
+      serviceId: microservice-comments-mongo
+
+error:
+  whitelabel:
+    enabled:false

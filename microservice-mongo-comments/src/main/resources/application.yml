@@ -1,0 +1,16 @@
+server:
+  port: 9000
+endpoints:
+  shutdown:
+    enabled: true
+  restart:
+    enabled: true
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+   config:
+      name:  microservice-comments-mongo
+   application:
+      name:  microservice-comments-mongo      

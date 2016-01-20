@@ -1,0 +1,21 @@
+server:
+  port: 9002
+spring:
+  application:
+    name: hystrixdashboard
+  config:
+    name: hystrixdashboard
+security:
+  ignored: true
+turbine:
+  aggregator:
+    clusterNameExpression: 'default'
+  appConfig: microservice-comments-mongo,microservice-users-bbdd
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    metadataMap:
+      instanceId: ${spring.application.name}:${server.port}
+  

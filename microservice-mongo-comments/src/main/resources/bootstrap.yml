@@ -1,0 +1,10 @@
+spring:
+  config:
+    name: microservice-comments-mongo
+  application:
+    name: microservice-comments-mongo
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8888
+      failFast: true
