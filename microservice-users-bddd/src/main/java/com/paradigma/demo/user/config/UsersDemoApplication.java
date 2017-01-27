@@ -18,6 +18,8 @@ public class UsersDemoApplication {
 	
 	
 	public static void main(String[] args) {
+		//fill data
+    	//dont't make this in production xD
 		final ConfigurableApplicationContext context = SpringApplication.run(UsersDemoApplication.class, args);
 		final UserRepository repo = context.getBean(UserRepository.class);
 		for(int i = 0 ; i < 100 ; i++){

@@ -33,7 +33,7 @@ public class CommentsDemoMongoApplication {
 	
     public static void main(String[] args) {
     	//fill data
-    	//not in production
+    	//dont't make this in production xD
     	final ConfigurableApplicationContext context =  SpringApplication.run(CommentsDemoMongoApplication.class, args);
     	CommentRepository repo = context.getBean(CommentRepository.class);
     	User user = new User();
