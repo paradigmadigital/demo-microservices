@@ -32,6 +32,8 @@ public class CommentsDemoMongoApplication {
 	
 	
     public static void main(String[] args) {
+    	//fill data
+    	//not in production
     	final ConfigurableApplicationContext context =  SpringApplication.run(CommentsDemoMongoApplication.class, args);
     	CommentRepository repo = context.getBean(CommentRepository.class);
     	User user = new User();
@@ -40,10 +42,10 @@ public class CommentsDemoMongoApplication {
 		user.setLastName("Apellido 1");
 		user.setPassword("password 1");
 		User user2 = new User();
-		user.setEmail("email_2@dominio.com");
-		user.setName("Nombre 2");
-		user.setLastName("Apellido 2");
-		user.setPassword("password 2");
+		user2.setEmail("email_2@dominio.com");
+		user2.setName("Nombre 2");
+		user2.setLastName("Apellido 2");
+		user2.setPassword("password 2");
     	for(int i = 0 ; i < 500 ; i++){
     		Comment comment = new Comment();
         	comment.setText("Esto es un comentario con id->"+i);
