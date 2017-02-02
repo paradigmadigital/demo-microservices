@@ -23,7 +23,7 @@
 		<start-class>com.paradigma.demo.hystrix.dashboard.HystrixDashboardApp</start-class>
 	</properties>
 
-	
+
 
 	<dependencies>
 		<dependency>
@@ -117,4 +117,16 @@
 			</snapshots>
 		</repository>
 	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>build plugin</id>
+			<url>https://mvnrepository.com/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
 </project>

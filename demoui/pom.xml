@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.paradigma.demo</groupId>
-	<artifactId>demoCarrefourUI</artifactId>
+	<artifactId>demo-UI</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>demoCarrefourUI</name>
-	<description>demoCarrefourUI</description>
+	<name>demo-UI</name>
+	<description>demo-UI</description>
 
 	<parent>
 		<groupId>org.springframework.cloud</groupId>
@@ -78,16 +78,13 @@
 			<artifactId>spring-cloud-starter-feign</artifactId>
 		</dependency>
 
-		<!-- <dependency>
-			<groupId>com.netflix.feign</groupId>
-			<artifactId>feign-core</artifactId>
-			<version>8.16.2</version>
-		</dependency> -->
+		<!-- <dependency> <groupId>com.netflix.feign</groupId> <artifactId>feign-core</artifactId> 
+			<version>8.16.2</version> </dependency> -->
 		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-netflix-core -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-netflix-core</artifactId>
-			
+
 		</dependency>
 
 		<dependency>
@@ -160,4 +157,16 @@
 			</snapshots>
 		</repository>
 	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>build plugin</id>
+			<url>https://mvnrepository.com/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
 </project>

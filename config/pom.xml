@@ -29,7 +29,7 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-config-server</artifactId>
 		</dependency>
-		
+
 	</dependencies>
 
 	<build>
@@ -57,5 +57,18 @@
 				<enabled>true</enabled>
 			</snapshots>
 		</repository>
+
 	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>build plugin</id>
+			<url>https://mvnrepository.com/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
 </project>
