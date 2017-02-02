@@ -11,6 +11,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.env.Environment;
 
 import com.mongodb.Mongo;
 import com.mongodb.MongoClientOptions;
@@ -56,7 +57,8 @@ public class CommentsDemoMongoApplication {
     	
     }
     
-    
+    @Autowired
+    private Environment env;
     
     @Autowired
     private MongoProperties properties;
@@ -69,7 +71,7 @@ public class CommentsDemoMongoApplication {
         Net net = mongodProcess.getConfig().net();
         properties.setHost(net.getServerAddress().getHostName());
         properties.setPort(net.getPort());
-        return properties.createMongoClient(this.options);
+        return properties.createMongoClient(this.options,env);
     }
 
     @Bean(destroyMethod = "stop")
