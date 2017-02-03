@@ -1,7 +1,7 @@
 server:
   port: 9001
 info:
-  component: demoCarrefourUI app 
+  component: demo-UI 
 endpoints:
   shutdown:
     enabled: true
@@ -9,9 +9,9 @@ endpoints:
     enabled: true
 spring:
   config:
-    name: demoCarrefourUI
+    name: demo-UI
   application:
-    name: demoCarrefourUI
+    name: demo-UI
   cloud:
     config:
       enabled: false
